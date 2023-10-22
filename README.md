@@ -3,8 +3,25 @@
 - Mulai modifikasi file `server/index.js` apabila ingin membuat HTTP server.
 - Mulai modifikasi folder `public` apabila ingin memodifikasi HTML.
 
-# `Binar` class
+## Installation
+1. Clone repository and cd into the directory
+```sh
+git clone https://github.com/mizzcode/challenge_4.git
+cd challenge_4
+```
+2. Install dependencies
+```sh
+npm install
+```
+3. Run server for development
+```sh
+npm run start-dev
+```
+4. Open ```http://localhost:3000 ``` in your browser
 
+<br>
+
+# `Binar` class
 Class ini berisi 1 static method saja, yang berfungsi untuk mengambil data mobil dari internet.
 
 ```typescript
