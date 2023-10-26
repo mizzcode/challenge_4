@@ -249,6 +249,19 @@ footer {
       right: 7rem;
    }
 
+   /* input, select */
+   #driver,
+   #date,
+   #pickupTime {
+      width: 11rem;
+      margin-bottom: 1rem;
+      margin-left: 0rem;
+   }
+   #totalPassenger {
+      width: 11rem;
+      margin-left: 0rem;
+   }
+
    #cariMobil {
       margin-bottom: 1rem;
    }
@@ -264,6 +277,10 @@ footer {
       padding-top: 2rem;
       padding-bottom: 1rem;
    }
+
+   #search {
+      bottom: -15rem;
+   }
 }
 
 @media only screen and (min-width: 770px) {
@@ -275,7 +292,7 @@ footer {
       width: 75%;
    }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 570px) {
    #search {
       bottom: -27rem;
       right: 3.5rem;
