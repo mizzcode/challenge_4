@@ -1,4 +1,5 @@
 # Binar: Challenge 04
+![image](https://github.com/mizzcode/challenge_4/assets/101040281/e6d08a8d-a53f-4dfe-9417-9d253e6de695)
 
 - Mulai modifikasi file `server/index.js` apabila ingin membuat HTTP server.
 - Mulai modifikasi folder `public` apabila ingin memodifikasi HTML.
