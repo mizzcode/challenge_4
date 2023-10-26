@@ -61,30 +61,45 @@ class App {
       availableCars.forEach((car) => {
          const carElement = this.makeCars(car);
 
-         if (car.capacity > totalPassenger) this.resultCar.append(carElement);
-
-         if (totalPassenger > maxCarCapacity) {
+         if (totalPassenger >= maxCarCapacity || totalPassenger < 1) {
             if (foundCar) {
-               this.resultCar.append(`Maaf! tidak ada mobil dengan jumlah penumpang ${totalPassenger} orang`);
+               window.alert(`Mobil dengan penumpang ${totalPassenger} tidak tersedia`);
                foundCar = false;
             }
+            return;
          }
+
+         if (car.capacity > totalPassenger) this.resultCar.append(carElement);
       });
    }
 
    populateCars(cars) {
       return cars.map((car) => {
+         const isPositive = this.getRandomInt(0, 1) === 1;
+         const timeAt = new Date();
+         const mutator = this.getRandomInt(1000000, 100000000);
+         const availableAt = new Date(timeAt.getTime() + (isPositive ? mutator : -1 * mutator));
+
          return {
             ...car,
-            availableAt: new Date(car.availableAt).getTime(),
+            availableAt,
          };
       });
    }
+
+   getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+   }
+
    // method format number to rupiah idr currency
    rupiah(number) {
       return new Intl.NumberFormat('id-ID', {
          style: 'currency',
          currency: 'IDR',
+         maximumFractionDigits: 0,
+         minimumFractionDigits: 0,
       }).format(number);
    }
 
