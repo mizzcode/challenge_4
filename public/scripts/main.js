@@ -104,14 +104,17 @@ class App {
    }
 
    makeCars(car) {
-      const div = document.createElement('div');
-      div.classList.add('cars');
-      div.classList.add('col-md-3');
-      div.classList.add('shadow-lg');
-      div.classList.add('p-4');
-      div.classList.add('flex-grow-1');
-      div.classList.add('m-3');
-      div.classList.add('rounded-3');
+      const divCol = document.createElement('div');
+      divCol.classList.add('col');
+      divCol.classList.add('mb-4');
+
+      const divCard = document.createElement('div');
+      divCard.classList.add('card');
+      divCard.classList.add('h-100');
+      divCard.classList.add('p-2');
+
+      const divCardBody = document.createElement('div');
+      divCardBody.classList.add('card-body');
 
       const img = document.createElement('img');
       img.setAttribute('src', `${car.image}`);
@@ -130,13 +133,13 @@ class App {
       description.innerText = `${car.description}`;
 
       const capacity = document.createElement('p');
-      capacity.innerHTML = `<i class='fa-solid fa-user-group'></i> ${car.capacity} orang`;
+      capacity.innerHTML = `<i class='fi-users'></i> ${car.capacity} orang`;
 
       const transmission = document.createElement('p');
-      transmission.innerHTML = `<i class='fa-solid fa-gear'></i> ${car.transmission}`;
+      transmission.innerHTML = `<i class='fi-settings'></i> ${car.transmission}`;
 
       const year = document.createElement('p');
-      year.innerHTML = `<i class='fa-solid fa-calendar'></i> Tahun ${car.year}`;
+      year.innerHTML = `<i class='fi-calendar'></i> Tahun ${car.year}`;
 
       const button = document.createElement('button');
       button.classList.add('btn');
@@ -147,9 +150,13 @@ class App {
       button.style.width = '100%';
       button.innerText = 'Pilih Mobil';
 
-      div.append(img, typeCar, rentalPerDay, description, capacity, transmission, year, button);
+      divCardBody.append(img, typeCar, rentalPerDay, description, capacity, transmission, year, button);
 
-      return div;
+      divCard.appendChild(divCardBody);
+
+      divCol.appendChild(divCard);
+
+      return divCol;
    }
 }
 
