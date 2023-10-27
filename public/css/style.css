@@ -161,23 +161,59 @@ a {
 #search {
    position: absolute;
    bottom: -3.5rem;
-   right: 19rem;
+   right: 15rem;
 }
 
 #result {
-   margin-top: 6rem;
+   margin-top: 7rem;
 }
 /* select, input */
 #driver,
 #date,
 #pickupTime,
 #totalPassenger {
-   width: 15rem;
+   width: 18.3rem;
    margin-top: 0.5rem;
 }
 /* button */
 #cariMobil {
    margin-top: 0.5rem;
+}
+
+i {
+   position: relative;
+   top: 0.3rem;
+}
+p {
+   margin-bottom: 0.3rem !important;
+}
+/* icon */
+.fi-users {
+   background: url('../images/icons/fi_users.svg');
+   background-repeat: no-repeat;
+
+   display: inline-block;
+   margin-top: 0.5rem;
+   height: 20px;
+   width: 23px;
+}
+.fi-settings {
+   background: url('../images/icons/fi_settings.svg');
+   background-repeat: no-repeat;
+
+   display: inline-block;
+   margin-top: 0.5rem;
+   height: 20px;
+   width: 23px;
+}
+.fi-calendar {
+   background: url('../images/icons/fi_calendar.svg');
+   background-repeat: no-repeat;
+
+   display: inline-block;
+   margin-top: 0.5rem;
+   height: 20px;
+   width: 23px;
 }
 
 footer {
@@ -203,7 +239,7 @@ footer {
    #search {
       z-index: 2;
       bottom: -12rem;
-      right: 6.5rem;
+      right: 8.5rem;
    }
    /* input, select */
    #driver,
@@ -218,6 +254,11 @@ footer {
    }
 
    .cars {
+      position: relative;
+      top: 10rem;
+   }
+
+   #result {
       position: relative;
       top: 10rem;
    }
@@ -279,7 +320,12 @@ footer {
    }
 
    #search {
-      bottom: -15rem;
+      bottom: -20rem;
+   }
+
+   #result {
+      position: relative;
+      top: 16rem;
    }
 }
 
@@ -310,6 +356,11 @@ footer {
    #cariMobil {
       width: 10.7rem;
       margin-left: 0.3rem;
+   }
+
+   #result {
+      position: relative;
+      top: 24rem;
    }
 
    .cars {
