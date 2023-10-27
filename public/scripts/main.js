@@ -34,7 +34,7 @@ class App {
       // set cars null
       let cars = null;
       // fetch data json
-      const response = await fetch('https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json');
+      const response = await fetch('https://raw.githubusercontent.com/mizzcode/challenge_4/main/data/cars.min.json');
       // olah data json ke object asli
       const body = await response.json();
       // ubah availableAt menjadi unix timestamp
