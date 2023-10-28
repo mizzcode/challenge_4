@@ -116,6 +116,9 @@ class App {
       const divCardBody = document.createElement('div');
       divCardBody.classList.add('card-body');
 
+      const divCar = document.createElement('div');
+      divCar.classList.add('car');
+
       const img = document.createElement('img');
       img.setAttribute('src', `${car.image}`);
       img.setAttribute('width', '100%');
@@ -155,7 +158,9 @@ class App {
       button.style.width = '92%';
       button.innerText = 'Pilih Mobil';
 
-      divCardBody.append(img, typeCar, rentalPerDay, description, capacity, transmission, year);
+      divCar.append(img, typeCar, rentalPerDay, description, capacity, transmission, year);
+
+      divCardBody.appendChild(divCar);
 
       divButton.appendChild(button);
 
