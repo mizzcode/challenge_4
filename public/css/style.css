@@ -180,11 +180,16 @@ a {
    margin-top: 0.5rem;
 }
 
-i {
+.card-body img {
+   height: 300px;
+   object-fit: cover;
+}
+
+.card-body i {
    position: relative;
    top: 0.3rem;
 }
-p {
+.card-body p {
    margin-bottom: 0.3rem !important;
 }
 /* icon */
@@ -233,6 +238,10 @@ footer {
    #pickupTime,
    #totalPassenger {
       width: 10rem;
+   }
+   .card-body img {
+      height: 200px;
+      object-fit: cover;
    }
 }
 @media only screen and (max-width: 1024px) {
