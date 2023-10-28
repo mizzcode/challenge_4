@@ -141,18 +141,25 @@ class App {
       const year = document.createElement('p');
       year.innerHTML = `<i class='fi-calendar'></i> Tahun ${car.year}`;
 
+      const divButton = document.createElement('div');
+      divButton.classList.add('d-flex');
+      divButton.classList.add('justify-content-center');
+      divButton.classList.add('align-items-center');
+
       const button = document.createElement('button');
       button.classList.add('btn');
       button.classList.add('btn-success');
-      button.classList.add('mt-3');
       button.classList.add('p-3');
+      button.classList.add('mb-3');
       button.classList.add('fw-bold');
-      button.style.width = '100%';
+      button.style.width = '92%';
       button.innerText = 'Pilih Mobil';
 
-      divCardBody.append(img, typeCar, rentalPerDay, description, capacity, transmission, year, button);
+      divCardBody.append(img, typeCar, rentalPerDay, description, capacity, transmission, year);
 
-      divCard.appendChild(divCardBody);
+      divButton.appendChild(button);
+
+      divCard.append(divCardBody, divButton);
 
       divCol.appendChild(divCard);
 
